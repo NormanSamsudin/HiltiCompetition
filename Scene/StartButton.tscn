@@ -1,0 +1,32 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/Icon/ButtonCrop.png" type="Texture" id=1]
+[ext_resource path="res://assets/upheavtt.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 382, 112 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 48
+font_data = ExtResource( 2 )
+
+[sub_resource type="Theme" id=3]
+default_font = SubResource( 2 )
+Button/styles/disabled = null
+Button/styles/focus = null
+Button/styles/hover = null
+Button/styles/normal = SubResource( 1 )
+Button/styles/pressed = null
+
+[sub_resource type="ViewportTexture" id=4]
+
+[node name="Button" type="Button"]
+margin_right = 388.0
+margin_bottom = 168.0
+theme = SubResource( 3 )
+text = "START"
+icon = SubResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

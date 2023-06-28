@@ -1,0 +1,251 @@
+[gd_scene load_steps=37 format=2]
+
+[ext_resource path="res://assets/upheavtt.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/Icon/SusEmailButton.png" type="Texture" id=2]
+[ext_resource path="res://assets/Icon/ButtonMegahGmail.png" type="Texture" id=3]
+[ext_resource path="res://src/GmailHomeSus.gd" type="Script" id=4]
+[ext_resource path="res://assets/Icon/RightArrow.png" type="Texture" id=5]
+[ext_resource path="res://assets/Icon/LeftArrow.png" type="Texture" id=6]
+[ext_resource path="res://assets/Background/gmail calculate without text.png" type="Texture" id=7]
+[ext_resource path="res://assets/Icon/close.png" type="Texture" id=8]
+[ext_resource path="res://assets/Pixellari.ttf" type="DynamicFontData" id=9]
+
+[sub_resource type="StyleBoxTexture" id=25]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 54, 41 )
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+expand_margin_top = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxTexture" id=26]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 54, 41 )
+
+[sub_resource type="StyleBoxTexture" id=27]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 54, 41 )
+
+[sub_resource type="Theme" id=3]
+Button/styles/hover = SubResource( 25 )
+Button/styles/normal = SubResource( 26 )
+Button/styles/pressed = SubResource( 27 )
+
+[sub_resource type="StyleBoxTexture" id=28]
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 55, 42 )
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+expand_margin_top = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxTexture" id=29]
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 55, 42 )
+
+[sub_resource type="StyleBoxTexture" id=30]
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 55, 42 )
+
+[sub_resource type="Theme" id=8]
+Button/styles/hover = SubResource( 28 )
+Button/styles/normal = SubResource( 29 )
+Button/styles/pressed = SubResource( 30 )
+
+[sub_resource type="StyleBoxTexture" id=35]
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 139, 136 )
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+expand_margin_top = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxTexture" id=36]
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 139, 136 )
+
+[sub_resource type="StyleBoxTexture" id=37]
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 139, 136 )
+
+[sub_resource type="Theme" id=12]
+Button/styles/hover = SubResource( 35 )
+Button/styles/normal = SubResource( 36 )
+Button/styles/pressed = SubResource( 37 )
+
+[sub_resource type="StyleBoxTexture" id=13]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 1191, 69 )
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+expand_margin_top = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxTexture" id=14]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 1191, 69 )
+
+[sub_resource type="StyleBoxTexture" id=15]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 1191, 69 )
+
+[sub_resource type="Theme" id=16]
+Button/styles/hover = SubResource( 13 )
+Button/styles/normal = SubResource( 14 )
+Button/styles/pressed = SubResource( 15 )
+
+[sub_resource type="StyleBoxTexture" id=17]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 1198, 53 )
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+expand_margin_top = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxTexture" id=18]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 1198, 53 )
+
+[sub_resource type="StyleBoxTexture" id=19]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 1198, 53 )
+
+[sub_resource type="Theme" id=20]
+Button/styles/hover = SubResource( 17 )
+Button/styles/normal = SubResource( 18 )
+Button/styles/pressed = SubResource( 19 )
+
+[sub_resource type="DynamicFont" id=21]
+size = 22
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=22]
+default_font = SubResource( 21 )
+Label/colors/font_color = Color( 1, 0, 0, 1 )
+
+[sub_resource type="DynamicFont" id=23]
+size = 22
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=24]
+default_font = SubResource( 23 )
+
+[sub_resource type="DynamicFont" id=34]
+size = 23
+font_data = ExtResource( 9 )
+
+[sub_resource type="DynamicFont" id=42]
+size = 50
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=43]
+default_font = SubResource( 42 )
+Label/colors/font_color = Color( 1, 0, 0, 1 )
+Label/styles/normal = null
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GmailCalculateWithoutText" type="Sprite" parent="."]
+position = Vector2( 683.974, 769.242 )
+texture = ExtResource( 7 )
+
+[node name="LeftArrow" type="Button" parent="."]
+margin_left = 22.0011
+margin_top = 58.336
+margin_right = 57.0011
+margin_bottom = 88.336
+theme = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RightArrow" type="Button" parent="."]
+visible = false
+margin_left = 76.0
+margin_top = 58.0
+margin_right = 111.0
+margin_bottom = 91.0
+theme = SubResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cross" type="Button" parent="."]
+margin_left = 1337.0
+margin_top = 5.0
+margin_right = 1360.0
+margin_bottom = 27.0
+theme = SubResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Megah" type="Button" parent="."]
+visible = false
+margin_left = 179.0
+margin_top = 291.0
+margin_right = 1367.0
+margin_bottom = 393.0
+theme = SubResource( 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="M3gah" type="Button" parent="."]
+margin_left = 180.2
+margin_top = 316.8
+margin_right = 1368.2
+margin_bottom = 418.8
+theme = SubResource( 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="inbox" type="Label" parent="."]
+margin_left = 195.0
+margin_top = 237.0
+margin_right = 359.0
+margin_bottom = 298.0
+theme = SubResource( 22 )
+text = "INBOX"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="URL" type="Label" parent="."]
+margin_left = 188.0
+margin_top = 58.0
+margin_right = 662.0
+margin_bottom = 85.0
+theme = SubResource( 24 )
+custom_fonts/font = SubResource( 34 )
+text = "https://mail.gugel.com/mail/u/0/#inbox"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PopupInstruction" type="Label" parent="."]
+margin_left = 175.137
+margin_top = 234.955
+margin_right = 493.137
+margin_bottom = 335.955
+theme = SubResource( 43 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="pressed" from="LeftArrow" to="." method="_on_LeftArrow_pressed"]
+[connection signal="pressed" from="Cross" to="." method="_on_Cross_pressed"]
+[connection signal="pressed" from="Megah" to="." method="_on_Megah_pressed"]
+[connection signal="pressed" from="M3gah" to="." method="_on_M3gah_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

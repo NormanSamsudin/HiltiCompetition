@@ -1,0 +1,225 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://assets/upheavtt.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/Background/start quiz.png" type="Texture" id=2]
+[ext_resource path="res://src/QuizThird.gd" type="Script" id=3]
+[ext_resource path="res://assets/Theme/FormTheme.tres" type="Theme" id=4]
+[ext_resource path="res://assets/Theme/YellowButton.tres" type="Theme" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 50
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=2]
+default_font = SubResource( 1 )
+Label/colors/font_color = Color( 1, 1, 1, 1 )
+Label/fonts/font = null
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.141176, 0.505882, 0.643137, 1 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 50
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=10]
+default_font = SubResource( 9 )
+Button/colors/font_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="StyleBoxFlat" id=28]
+bg_color = Color( 0.623529, 0.188235, 0.188235, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color( 0.623529, 0.188235, 0.188235, 1 )
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id=29]
+bg_color = Color( 0.623529, 0.188235, 0.188235, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id=30]
+
+[sub_resource type="StyleBoxFlat" id=17]
+bg_color = Color( 0.623529, 0.188235, 0.188235, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="DynamicFont" id=31]
+size = 50
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=32]
+default_font = SubResource( 31 )
+Label/colors/font_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 50
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=12]
+default_font = SubResource( 11 )
+Button/colors/font_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="StyleBoxFlat" id=22]
+bg_color = Color( 0.733333, 0.0745098, 0.780392, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color( 0.733333, 0.0745098, 0.780392, 1 )
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id=23]
+bg_color = Color( 0.733333, 0.0745098, 0.780392, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id=24]
+
+[sub_resource type="StyleBoxFlat" id=13]
+bg_color = Color( 0.733333, 0.0745098, 0.780392, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=33]
+bg_color = Color( 0.121569, 0.647059, 0.392157, 1 )
+
+[node name="Control" type="Control"]
+margin_right = 1366.0
+margin_bottom = 768.0
+rect_min_size = Vector2( 1366, 768 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StartQuiz" type="Sprite" parent="."]
+position = Vector2( 682.586, 383.56 )
+texture = ExtResource( 2 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_right = 1366.0
+margin_bottom = 384.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+margin_right = 1366.0
+margin_bottom = 389.0
+rect_min_size = Vector2( 1366, 384 )
+theme = SubResource( 2 )
+custom_styles/normal = SubResource( 8 )
+text = "QUESTION 3
+
+
+If you encounter a ransomware attack, 
+the first thing you should do is pay the ransom. 
+True or False ?
+
+"
+align = 1
+valign = 1
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 362.25
+margin_top = 426.0
+margin_right = 662.25
+margin_bottom = 726.0
+theme = SubResource( 10 )
+custom_styles/hover = SubResource( 28 )
+custom_styles/pressed = SubResource( 29 )
+custom_styles/focus = SubResource( 30 )
+custom_styles/normal = SubResource( 17 )
+action_mode = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Button2"]
+margin_right = 300.0
+margin_bottom = 300.0
+theme = SubResource( 32 )
+text = "true"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button3" type="Button" parent="."]
+margin_left = 703.75
+margin_top = 426.0
+margin_right = 1003.75
+margin_bottom = 726.0
+theme = SubResource( 12 )
+custom_styles/hover = SubResource( 22 )
+custom_styles/pressed = SubResource( 23 )
+custom_styles/focus = SubResource( 24 )
+custom_styles/normal = SubResource( 13 )
+action_mode = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="Button3"]
+margin_right = 300.0
+margin_bottom = 300.0
+theme = SubResource( 32 )
+text = "false"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Display" type="Label" parent="."]
+margin_left = 1276.69
+margin_top = 1.75736
+margin_right = 1362.69
+margin_bottom = 73.7574
+theme = ExtResource( 4 )
+custom_styles/normal = SubResource( 33 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+visible = false
+margin_left = 1023.89
+margin_top = 19.435
+margin_right = 1252.89
+margin_bottom = 76.435
+theme = ExtResource( 5 )
+text = "Will skip in:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_Button3_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

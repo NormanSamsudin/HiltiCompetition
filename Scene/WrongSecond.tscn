@@ -1,0 +1,72 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://assets/upheavtt.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/Background/start quiz.png" type="Texture" id=2]
+[ext_resource path="res://src/WrongSecond.gd" type="Script" id=3]
+[ext_resource path="res://Scene/TransitionScreen.tscn" type="PackedScene" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 150
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=2]
+default_font = SubResource( 1 )
+Label/colors/font_color = Color( 0.721569, 0.2, 0.0980392, 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.137255, 0.196078, 0.168627, 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 70
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=5]
+default_font = SubResource( 4 )
+Label/colors/font_color = Color( 0.0470588, 0.533333, 0.607843, 1 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.137255, 0.196078, 0.168627, 1 )
+
+[node name="Control" type="Control"]
+margin_right = 1366.0
+margin_bottom = 768.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StartQuiz" type="Sprite" parent="."]
+position = Vector2( 681.942, 383.56 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+margin_top = 234.0
+margin_right = 1366.0
+margin_bottom = 534.0
+theme = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+text = "Wrong"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_top = 534.0
+margin_right = 1366.0
+margin_bottom = 684.0
+theme = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+text = "answer : all of the above"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="TransitionScreen" parent="." instance=ExtResource( 4 )]
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="transitioned" from="TransitionScreen" to="." method="_on_TransitionScreen_transitioned"]

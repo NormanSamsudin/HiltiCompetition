@@ -1,0 +1,104 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://assets/upheavtt.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/Icon/Conversation.png" type="Texture" id=2]
+[ext_resource path="res://assets/Background/pngtree-interior-rendering-of-office-meeting-room-png-image_2214456.jpg" type="Texture" id=3]
+[ext_resource path="res://assets/Icon/DR1 dialogBox.png" type="Texture" id=4]
+[ext_resource path="res://src/ManagerInstruction.gd" type="Script" id=5]
+[ext_resource path="res://Scene/TransitionScreen.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/Theme/FormTheme.tres" type="Theme" id=7]
+[ext_resource path="res://assets/Theme/YellowButton.tres" type="Theme" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+size = 77
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=2]
+default_font = SubResource( 1 )
+
+[node name="Control" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WallpaperWithTaskBar" type="Sprite" parent="."]
+position = Vector2( 682.377, 430.336 )
+scale = Vector2( 1.42006, 1.42006 )
+texture = ExtResource( 3 )
+
+[node name="WallpaperWithTaskBar2" type="Sprite" parent="."]
+position = Vector2( 1248.61, 290.695 )
+scale = Vector2( 1.57009, 1.57009 )
+texture = ExtResource( 2 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Dr1DialogBox" type="Sprite" parent="."]
+position = Vector2( 653.487, 404.819 )
+scale = Vector2( 0.680954, 0.680954 )
+texture = ExtResource( 4 )
+
+[node name="Speaking" type="Label" parent="Dr1DialogBox"]
+margin_left = 410.22
+margin_top = 159.889
+margin_right = 778.22
+margin_bottom = 229.889
+theme = SubResource( 2 )
+text = "SPEAKING"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Manager" type="Label" parent="Dr1DialogBox"]
+margin_left = -844.484
+margin_top = 162.703
+margin_right = -525.484
+margin_bottom = 227.703
+theme = SubResource( 2 )
+text = "MANAGER"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text" type="Label" parent="Dr1DialogBox"]
+margin_left = -945.0
+margin_top = 244.0
+margin_right = 677.0
+margin_bottom = 498.0
+theme = SubResource( 2 )
+text = "HYE! WELCOME TO OUR COMPANY!
+PLEASE CHECK YOUR EMAIL ONCE
+YOU'RE ON COMPUTER."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TransitionScreen" parent="." instance=ExtResource( 6 )]
+
+[node name="Display" type="Label" parent="."]
+margin_left = 1276.69
+margin_top = 1.75736
+margin_right = 1362.69
+margin_bottom = 73.7574
+theme = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 1023.89
+margin_top = 19.435
+margin_right = 1252.89
+margin_bottom = 76.435
+theme = ExtResource( 8 )
+text = "Will skip in:"
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="transitioned" from="TransitionScreen" to="." method="_on_CanvasLayer_transitioned"]
